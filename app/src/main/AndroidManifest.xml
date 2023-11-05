@@ -16,6 +16,9 @@
         android:theme="@style/Theme.AdminApp"
         tools:targetApi="31">
         <activity
+            android:name=".Activites.AttendanceActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activites.ContactUsActivity"
             android:exported="false" />
         <activity

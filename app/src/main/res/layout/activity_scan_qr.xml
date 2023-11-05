@@ -35,20 +35,45 @@
             android:layout_centerVertical="true"
             android:background="@android:color/transparent"/>
     </RelativeLayout>
-
-    <EditText
-        android:id="@+id/et_qr_code"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <androidx.camera.view.PreviewView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/cameraPreview"
-        />
-
-
-
+        android:orientation="vertical"
+        android:gravity="center">
+        <com.budiyev.android.codescanner.CodeScannerView
+            android:id="@+id/scanner_view"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:autoFocusButtonColor="@color/white"
+            app:flashButtonColor="@color/white"
+            android:layout_margin="24dp"
+            app:autoFocusButtonVisible="true"
+            app:flashButtonVisible="true"
+            app:maskColor="#6C000000"
+            />
+        <TextView
+            android:id="@+id/txt_showQr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="scan"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:layout_marginTop="16dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_scanQr"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_size"
+            android:background="@drawable/btn_background_login_custom"
+            android:layout_marginRight="@dimen/mar_rig_lift"
+            android:layout_marginLeft="@dimen/mar_rig_lift"
+            android:text="@string/scan"
+            android:layout_marginTop="@dimen/margin_top"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small"
+            android:layout_marginBottom="20dp"
+            />
+    </LinearLayout>
 
 
 </LinearLayout>

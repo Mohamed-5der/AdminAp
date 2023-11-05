@@ -64,23 +64,72 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@color/white">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="74dp"
-                    android:orientation="horizontal">
 
-                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp">
+                    <TextView
+                        android:id="@+id/txt_arabic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/arabic_icon"
+                        android:text="@string/arabic"
+                        android:drawablePadding="@dimen/mar_rig_lift"
+                        android:textSize="@dimen/text_size_small"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:padding="12dp"
+                        android:textStyle="bold|normal"
+                        />
+
+                    <ImageView
+                        android:id="@+id/btn_check_ar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:padding="24dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/rb_noncheck_icon" />
+
+                </RelativeLayout>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/black"
                     android:alpha="0.5"/>
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="74dp"
-                    android:orientation="horizontal">
+                    android:layout_height="72dp">
+                    <TextView
+                        android:id="@+id/txt_english"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/english_icon"
+                        android:text="@string/english"
+                        android:drawablePadding="@dimen/mar_rig_lift"
+                        android:textSize="@dimen/text_size_small"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:padding="12dp"
+                        android:textStyle="bold|normal"
+                        />
 
-                </LinearLayout>
+                    <ImageView
+                        android:id="@+id/btn_check_en"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:padding="24dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/rb_noncheck_icon" />
+
+                </RelativeLayout>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

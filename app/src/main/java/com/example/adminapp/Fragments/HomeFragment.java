@@ -19,7 +19,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.adminapp.Activites.AttendanceActivity;
 import com.example.adminapp.Activites.ScanQrActivity;
+import com.example.adminapp.Adapter.AttendanceAdapter;
 import com.example.adminapp.Adapter.GroupAdapter;
 import com.example.adminapp.Classes.DataQuiz;
 import com.example.adminapp.R;
@@ -55,7 +57,7 @@ public class HomeFragment extends Fragment {
                 if (nameGroup==null){
                     Toast.makeText(getActivity(), "Select Group", Toast.LENGTH_SHORT).show();
                 }else {
-                    Intent intent =new Intent(getActivity(), ScanQrActivity.class);
+                    Intent intent =new Intent(getContext(), ScanQrActivity.class);
                     startActivity(intent);
                 }
             }
