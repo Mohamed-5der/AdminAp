@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -39,12 +39,38 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_Attendance"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_scanQr"
+        android:layout_below="@+id/l_bar"/>
 
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_scanQr"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_size"
+        android:background="@drawable/btn_background_scan_custom"
+        android:layout_marginRight="@dimen/mar_rig_lift"
+        android:layout_marginLeft="@dimen/mar_rig_lift"
+        android:text="@string/scan"
+        android:layout_above="@+id/btn_submit"
+        android:layout_marginTop="@dimen/margin_top"
+        android:textColor="@color/yellow"
+        android:textSize="@dimen/text_size_small"
+        android:layout_marginBottom="20dp"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_size"
+        android:background="@drawable/btn_background_login_custom"
+        android:layout_marginRight="@dimen/mar_rig_lift"
+        android:layout_marginLeft="@dimen/mar_rig_lift"
+        android:text="@string/submit"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_small"
+        android:layout_marginBottom="20dp"
+        />
 
 
-
-
-
-</LinearLayout>
+</RelativeLayout>

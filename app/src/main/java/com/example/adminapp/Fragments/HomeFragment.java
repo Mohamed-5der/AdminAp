@@ -36,6 +36,9 @@ public class HomeFragment extends Fragment {
     public static TextView selectGroup;
     public static String nameGroup;
 
+    public HomeFragment() {
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

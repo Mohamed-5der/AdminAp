@@ -1,5 +1,6 @@
 package com.example.adminapp.Adapter;
 
+import android.app.Dialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.adminapp.Classes.DataRequest;
+import com.example.adminapp.Fragments.RequestFragment;
 import com.example.adminapp.R;
 
 import java.util.ArrayList;
@@ -18,8 +20,16 @@ import java.util.ArrayList;
 public class RequestAdapter extends RecyclerView.Adapter<RequestViewHolder> {
     ArrayList<DataRequest> dataRequests =new ArrayList<>();
 
-    public RequestAdapter(ArrayList<DataRequest> dataRequests) {
+    Dialog dialogAccept ;
+    Dialog dialogReject ;
+    Dialog dialogAreSure ;
+
+
+    public RequestAdapter(ArrayList<DataRequest> dataRequests, Dialog dialogAccept, Dialog dialogReject, Dialog dialogAreSure) {
         this.dataRequests = dataRequests;
+        this.dialogAccept = dialogAccept;
+        this.dialogReject = dialogReject;
+        this.dialogAreSure = dialogAreSure;
     }
 
     @NonNull
@@ -32,7 +42,7 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull RequestViewHolder holder, int position) {
         DataRequest dataRequest=dataRequests.get(position);
-        holder.onBind(dataRequest);
+        holder.onBind(dataRequest,dialogAccept,dialogReject,dialogAreSure);
     }
 
     @Override
@@ -52,9 +62,22 @@ class RequestViewHolder extends RecyclerView.ViewHolder{
         reject =itemView.findViewById(R.id.btn_reject);
         accept =itemView.findViewById(R.id.btn_accept);
     }
-    public void onBind(DataRequest dataRequest){
+    public void onBind(DataRequest dataRequest , Dialog dialogAccept, Dialog dialogReject, Dialog dialogAreSure){
         imgStudent.setImageResource(dataRequest.getImgStudent());
         oldGroup.setText(dataRequest.getOldGroup());
         newGroup.setText(dataRequest.getNewGroup());
+        accept.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogAccept.show();
+            }
+        });
+        reject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogAreSure.show();
+            }
+        });
     }
+
 }

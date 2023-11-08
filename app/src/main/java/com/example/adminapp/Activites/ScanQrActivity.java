@@ -16,7 +16,6 @@ import com.google.zxing.Result;
 
 public class ScanQrActivity extends AppCompatActivity {
     ImageButton back;
-    TextView show;
 
     private CodeScanner mCodeScanner;
     @Override
@@ -24,7 +23,6 @@ public class ScanQrActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan_qr);
         back=findViewById(R.id.btn_back);
-        show=findViewById(R.id.txt_showQr);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,8 +37,8 @@ public class ScanQrActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        show.setText(result.getText());
                         Toast.makeText(ScanQrActivity.this, result.getText(), Toast.LENGTH_SHORT).show();
+
                     }
                 });
             }
@@ -64,6 +62,8 @@ public class ScanQrActivity extends AppCompatActivity {
         mCodeScanner.releaseResources();
         super.onPause();
     }
+
+
 
 
 
