@@ -16,6 +16,18 @@
         android:theme="@style/Theme.AdminApp"
         tools:targetApi="31">
         <activity
+            android:name=".Edit_Password_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Contact_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Privecy_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Terms_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Activites.AttendanceActivity"
             android:exported="false" />
         <activity
