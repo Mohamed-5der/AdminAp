@@ -28,6 +28,7 @@
     <string name="male">Male</string>
     <string name="reject">Reject</string>
     <string name="accept">Accept</string>
+    <string name="view">View Profile</string>
     <string name="female">Female</string>
 
     <string name="forgot">Forgot password!</string>
